@@ -1,0 +1,217 @@
+.skills {
+  padding: 5rem 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #121212, #000000, #f58d8d), url('/public/images/abstract-bg.jpg'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="2" cy="2" r="2" fill="rgba(255,255,255,0.2)"/></svg>');
+  background-size: cover, 200% 200%, 20px 20px;
+  background-attachment: fixed;
+  animation: gradient-animation 10s ease infinite;
+}
+
+.skills h3 {
+  font-size: 1.8rem;
+  margin: 2rem 0 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Top Tools Section */
+.top-tools-container {
+  margin: 2rem 0;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tool-card {
+  background-color: rgba(116, 116, 116, 0.247);
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+}
+
+.tool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.tool-logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tool-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.tool-header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+.tool-category {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.skill-level-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-level-bar {
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-level-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color-dark));
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+.skill-level-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+/* Skills Categories Section */
+.skills-categories-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+  max-width: 100%;
+  margin: 0 auto; 
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background-color: rgba(116, 116, 116, 0.247);
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+}
+
+.skill-category h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.skill-category h4::after {
+  content: '';
+  position: relative;
+  bottom: 0.1rem;
+  left: 0.1rem;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.8rem;
+}
+
+.skill-item {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--text-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .tools-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .skills h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  
+  .tool-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+} 

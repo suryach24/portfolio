@@ -1,46 +1,102 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive personal portfolio website built with React and TypeScript. This project showcases a clean and professional design inspired by [Bjorn Melin's portfolio](https://bjornmelin.io/).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Responsive design that works on all devices
+- Modern UI with smooth animations
+- Sections for showcasing projects, skills, and contact information
+- Clean and maintainable code structure
+- TypeScript for type safety
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- TypeScript
+- CSS3
+- Font Awesome for icons
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+src/
+├── components/       # React components
+│   ├── Header.tsx    # Navigation header
+│   ├── Hero.tsx      # Hero section
+│   ├── About.tsx     # About section
+│   ├── Projects.tsx  # Projects section
+│   ├── Skills.tsx    # Skills section
+│   ├── Contact.tsx   # Contact section
+│   └── Footer.tsx    # Footer section
+├── styles/           # Component-specific styles
+│   ├── Header.css
+│   ├── Hero.css
+│   ├── About.css
+│   ├── Projects.css
+│   ├── Skills.css
+│   ├── Contact.css
+│   └── Footer.css
+├── App.tsx           # Main App component
+├── App.css           # App-specific styles
+├── index.tsx         # Entry point
+└── index.css         # Global styles
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14 or later)
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository
+   ```
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
+   ```
 
-### `npm run eject`
+2. Install dependencies
+   ```
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Start the development server
+   ```
+   npm start
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Customization
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To personalize this portfolio:
 
-## Learn More
+1. Replace "YourName" in components with your actual name
+2. Update project data in `Projects.tsx`
+3. Update skills data in `Skills.tsx`
+4. Update contact information in `Contact.tsx`
+5. Add your own images to the `public/images` directory
+6. Customize colors in `index.css` (CSS variables)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To build the app for production:
+
+```
+npm run build
+```
+
+This creates an optimized production build in the `build` folder that you can deploy to hosting services like Netlify, Vercel, or GitHub Pages.
+
+## License
+
+MIT
+
+## Acknowledgements
+
+- Design inspired by [Bjorn Melin's portfolio](https://bjornmelin.io/)
+- Icons from [Font Awesome](https://fontawesome.com/)
+- Fonts from [Google Fonts](https://fonts.google.com/)
