@@ -10,26 +10,26 @@ interface CompanyLogo {
 const companyLogos: CompanyLogo[] = [
   {
     name: 'Invoice Cloud',
-    logo: '/images/companies/InvoiceCloud.jpg',
+    logo: '/images/companies/invoice-cloud-logo.svg',
     alt: 'Invoice Cloud logo'
   },
   {
-    name: 'Verizon',
+    name: 'Verizon Telecommunications',
     logo: '/images/companies/verizon-logo.svg',
     alt: 'Verizon Telecommunication Inc logo'
   },
   {
-    name: 'Ally',
+    name: 'Ally Financial',
     logo: '/images/companies/Ally.svg',
     alt: 'Ally Banking and Finance logo'
   },
   {
-    name: 'Humana',
+    name: 'Humana Health Insurance',
     logo: '/images/companies/humana-logos.svg',
     alt: 'Humana Inc logo'
   },
   {
-    name: 'Coyote Logistics',
+    name: 'RXO Logistics',
     logo: '/images/companies/coyote-logistics-logo.svg',
     alt: 'Coyote Logistics logo'
   }
@@ -39,8 +39,8 @@ const CompanyLogos: React.FC = () => {
   return (
     <section className="company-logos-section">
       <div className="container">
-        <h3 className="section-title">Companies I've Worked With</h3>
         <div className="logos-container">
+          <div className="section-header">Partnered with</div>
           <div className="logos-track">
             {/* First set of logos */}
             {companyLogos.map((company, index) => (

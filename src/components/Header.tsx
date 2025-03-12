@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <a href="/">
+          <Link to="/">
             <span>Surya Chandra | Portfolio</span>
-          </a>
+          </Link>
         </div>
         <div className={`menu-button ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span>
@@ -26,10 +33,23 @@ const Header: React.FC = () => {
         </div>
         <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            {isHomePage ? (
+              <>
+                <li><a href="#about" onClick={closeMenu}>About</a></li>
+                <li><Link to="/about-me" onClick={closeMenu}>Resume</Link></li>
+                <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+                <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
+                <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+              </>
+            ) : (
+              <>
+                <li><Link to="/#about" onClick={closeMenu}>About</Link></li>
+                <li><Link to="/about-me" onClick={closeMenu}>Resume</Link></li>
+                <li><Link to="/#projects" onClick={closeMenu}>Projects</Link></li>
+                <li><Link to="/#skills" onClick={closeMenu}>Skills</Link></li>
+                <li><Link to="/#contact" onClick={closeMenu}>Contact</Link></li>
+              </>
+            )}
           </ul>
         </nav>
       </div>

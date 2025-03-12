@@ -52,10 +52,6 @@ const skillsData: SkillCategory[] = [
     skills: ['Apache HTTP', 'Nginx', 'Apache Tomcat', 'WebLogic']
   },
   {
-    category: 'Migration & Integration',
-    skills: ['AWS Application Migration Service', 'Database Migration Service', 'DataSync']
-  },
-  {
     category: 'Networking & Security',
     skills: ['VPC', 'Load Balancers', 'Route53', 'API Gateway', 'CloudFront']
   }
@@ -112,14 +108,20 @@ const Skills: React.FC = () => {
         <h3>Technical Skill Categories</h3>
         <div className="skills-container">
           {skillsData.map((category, index) => (
-            <div className="skill-category" key={index}>
-              <h4>{category.category}</h4>
-              <div className="skills-grid">
-                {category.skills.map((skill, skillIndex) => (
-                  <div className="skill-item" key={skillIndex}>
-                    <span>{skill}</span>
+            <div className="skill-card" key={index}>
+              <div className="skill-card-inner">
+                <div className="skill-card-front">
+                  <h4>{category.category}</h4>
+                </div>
+                <div className="skill-card-back">
+                  <div className="skills-grid">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div className="skill-item" key={skillIndex}>
+                        <li>{skill}</li>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           ))}

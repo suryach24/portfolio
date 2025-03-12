@@ -86,7 +86,7 @@
 }
 
 .project-content p {
-  color: var(--secondary-color);
+  color: white;
   margin-bottom: 1.5rem;
   line-height: 1.6;
   flex: 1;

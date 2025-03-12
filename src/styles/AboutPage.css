@@ -1,0 +1,594 @@
+.about-page {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  background: linear-gradient(135deg, #121212, #000000, #f58d8d);
+  background-size: cover, 200% 200%, 20px 20px;
+  background-attachment: fixed;
+  animation: gradient-animation 1s ease infinite;
+}
+
+.about-page-content {
+  padding-top: 50px; /* Account for fixed header */
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container-professional-summary {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+.container-experience-section {
+  max-width:  75%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  position: relative;
+  color: rgb(255, 255, 255);
+} 
+
+.container-certifications-section {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  position: relative;
+  color: rgb(255, 255, 255);
+} 
+
+.container-education-section {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  position: relative;
+  color: rgb(255, 255, 255);
+} 
+
+.container-hobbies-section {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  position: relative;
+  color: rgb(255, 255, 255);
+} 
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 1rem 0;
+  background: linear-gradient(135deg, var(--bg-color), var(--bg-color-dark));
+  display: flex;
+  justify-content: center;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.profile-image {
+  flex: 0 0 300px;
+}
+
+.portrait-container {
+  width: 250px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portrait-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.portrait {
+    width: 250px;
+    height: 300px;
+    object-fit: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 168, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.profile-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.title-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.title-tag {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  list-style-type: none;
+}
+
+.title-tag:hover {
+  transform: translateY(-5px);
+  background-color: var(--accent-color);
+}
+
+/* Summary Section */
+.summary-section {
+  padding: 5rem 0;
+  background-color: var(--bg-color-light);
+}
+
+.summary-content {
+  background-color: rgba(116, 116, 116, 0.247);
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.summary-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.summary-content ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.summary-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Experience Section */
+.experience-section {
+  padding: 5rem 0;
+}
+
+.experience-timeline {
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  width: 3px;
+  background-color: var(--primary-color);
+}
+
+.experience-item {
+  display: flex;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.company-logo {
+  position: relative;
+  flex: 0 0 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 0 5px var(--bg-color), 0 0 0 8px var(--primary-color);
+}
+
+.company-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.experience-content {
+  flex: 1;
+  margin-left: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  background-color: rgba(116, 116, 116, 0.247);
+}
+
+.company {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.position {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.period {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.responsibilities {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.responsibilities li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+/* Certifications Section */
+.certifications-section {
+  padding: rem 0;
+  background-color: var(--bg-color-light);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 2rem;
+}
+
+.certification-item {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(116, 116, 116, 0.247);
+}
+
+.certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.certification-badge {
+  flex: 0 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--bg-color-light);
+}
+
+.certification-badge img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.certification-info {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.certification-info h3 {
+  font-size: 1.2rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  color: var(--primary-color);
+}
+
+.certification-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0rem;
+  color: var(--text-color);
+}
+
+.certification-issuer {
+  font-weight: 500;
+  color: #f5f5f5 !important;
+}
+
+.issue-date {
+  font-style: italic;
+  color: #cccccc !important;
+}
+
+/* Education Section */
+.education-section {
+  padding: 5rem 0;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 2rem;
+}
+
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  background-color: rgba(116, 116, 116, 0.247);
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-icon {
+  flex: 0 0 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.education-info {
+  flex: 1;
+}
+
+.education-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.institution {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.education-info .period {
+  margin-bottom: 1rem;
+}
+
+.education-info p:last-child {
+  line-height: 1.6;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+  padding: 0rem 0;
+  background-color: var(--bg-color-light);
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.hobby-item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  background-color: rgba(116, 116, 116, 0.247);
+}
+
+.hobby-item:hover {
+  transform: translateY(-10px);
+}
+
+.hobby-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+.hobby-item h3 {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0rem;
+  color: var(--primary-color);
+}
+
+.hobby-item p {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .profile-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info h1 {
+    font-size: 2.8rem;
+  }
+
+  .profile-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .title-tags {
+    justify-content: center;
+  }
+
+  .certification-item,
+  .education-item {
+    flex-direction: column;
+  }
+
+  .certification-badge {
+    padding: 2rem;
+    flex: auto;
+  }
+
+  .education-icon {
+    margin: 0 auto 1.5rem;
+  }
+
+  .education-info {
+    text-align: center;
+  }
+
+  .certifications-grid,
+  .education-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .summary-content,
+  .experience-content,
+  .education-item,
+  .hobby-item {
+    padding: 1.5rem;
+  }
+
+  .profile-image {
+    flex: 0 0 200px;
+  }
+
+  .portrait-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .experience-timeline::before {
+    left: 20px;
+  }
+
+  .company-logo {
+    flex: 0 0 40px;
+    height: 40px;
+  }
+
+  .company-logo img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .experience-content {
+    margin-left: 1rem;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .profile-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .company {
+    font-size: 1.3rem;
+  }
+
+  .position {
+    font-size: 1.1rem;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+} 

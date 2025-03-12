@@ -2,18 +2,21 @@
   background-color: var(--dark-color);
   color: white;
   padding: 3rem 0 1.5rem;
+  background: linear-gradient(135deg, #121212, #000000, #f58d8d), url('/public/images/abstract-bg.jpg'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="2" cy="2" r="2" fill="rgba(255,255,255,0.2)"/></svg>');
+  background-size: cover, 200% 200%, 20px 20px;
+  background-attachment: fixed;
+  animation: gradient-animation 10s ease infinite;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 100;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 1rem 10%;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 3rem;
@@ -41,6 +44,11 @@
   color: white;
 }
 
+.footer-bottom-left {
+  text-align: left;
+  color: white;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
@@ -64,11 +72,13 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  text-align: right;
 }
 
 .footer-bottom p {
-  color: #a0aec0;
+  color: #ffffff;
   font-size: 0.9rem;
+  text-align: right;
 }
 
 @media (max-width: 768px) {

@@ -8,9 +8,6 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          <div className="footer-logo">
-            <a href="/">YourName</a>
-          </div>
           <div className="footer-links">
             <ul>
               <li><a href="#about">About</a></li>
@@ -32,6 +29,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="footer-bottom">
+          <div className="footer-bottom-left">Portfolio</div>
           <p>&copy; {currentYear} Surya Chandra Kukunuri. All rights reserved.</p>
         </div>
       </div>
