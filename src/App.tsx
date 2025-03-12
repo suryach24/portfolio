@@ -7,7 +7,6 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import CompanyLogos from './components/CompanyLogos';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 
@@ -26,7 +25,6 @@ function App() {
                 <Projects />
                 <Skills />
                 <CompanyLogos />
-                <Contact />
               </main>
               <Footer />
             </>

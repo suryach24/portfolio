@@ -39,7 +39,6 @@ const Header: React.FC = () => {
                 <li><Link to="/about-me" onClick={closeMenu}>Resume</Link></li>
                 <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
                 <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-                <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
               </>
             ) : (
               <>
@@ -47,7 +46,6 @@ const Header: React.FC = () => {
                 <li><Link to="/about-me" onClick={closeMenu}>Resume</Link></li>
                 <li><Link to="/#projects" onClick={closeMenu}>Projects</Link></li>
                 <li><Link to="/#skills" onClick={closeMenu}>Skills</Link></li>
-                <li><Link to="/#contact" onClick={closeMenu}>Contact</Link></li>
               </>
             )}
           </ul>

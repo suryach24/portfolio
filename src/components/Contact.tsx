@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
         <div className="contact-info">
           <h3>Get In Touch</h3>
           <p>
-            I'm currently working as a Platform Reliability Engineer at InvoiceCloud. Please hit me up if you want to connect.
+            I'm a Platform Reliability Engineer at InvoiceCloud. Please hit me up if you want to connect.
           </p>
           <div className="contact-methods">
             <div className="contact-method">

@@ -37,10 +37,13 @@ const companyLogos: CompanyLogo[] = [
 
 const CompanyLogos: React.FC = () => {
   return (
-    <section className="company-logos-section">
-      <div className="container">
+    <section id="company-logos">
+      <div className="section-header">
+        <h2>Worked For</h2>
+        <div className="section-line"></div>
+      </div>
+      <div className="container-logos">
         <div className="logos-container">
-          <div className="section-header">Partnered with</div>
           <div className="logos-track">
             {/* First set of logos */}
             {companyLogos.map((company, index) => (

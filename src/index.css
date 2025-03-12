@@ -83,13 +83,33 @@ button, .button {
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700; 
 }
 
 .section-header h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: white;
 }
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
 
 section {
   padding: 5rem 0;
@@ -116,4 +136,13 @@ section {
 .fab {
   font-size: 1.5rem;
   margin: 0 0.5rem;
+}
+
+/* Example for a card or container */
+.card, .container {
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover, .container:hover {
+  box-shadow: 0 0 15px var(--primary-color);
 }

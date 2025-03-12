@@ -11,10 +11,10 @@
   padding-top: 50px; /* Account for fixed header */
 }
 
-.container {
+.container-header {
   max-width: 1800px;
   margin: 0 auto;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -61,11 +61,10 @@
 } 
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   color: var(--primary-color);
   position: relative;
-  display: flex;
   justify-content: center;
   padding-bottom: 0.2rem;
 }
@@ -73,8 +72,9 @@
 .section-title::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80px;
   height: 4px;
   background-color: var(--primary-color);
@@ -123,7 +123,6 @@
     transition: transform 0.3s ease;
 }
 
-
 .profile-info {
   flex: 1;
 }
@@ -166,7 +165,7 @@
 
 /* Summary Section */
 .summary-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: var(--bg-color-light);
 }
 
@@ -194,7 +193,7 @@
 
 /* Experience Section */
 .experience-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .experience-timeline {
@@ -361,7 +360,7 @@
 
 /* Education Section */
 .education-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .education-content {
@@ -424,7 +423,7 @@
 
 /* Hobbies Section */
 .hobbies-section {
-  padding: 0rem 0;
+  padding: 1rem 0;
   background-color: var(--bg-color-light);
 }
 
@@ -492,10 +491,15 @@
   .section-title::after {
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 0 0 15px var(--primary-color);
   }
 
   .title-tags {
     justify-content: center;
+  }
+  
+  .title-tag:hover {
+    box-shadow: 0 0 15px var(--primary-color);
   }
 
   .certification-item,

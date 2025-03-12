@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
       <main className="about-page-content">
         {/* Profile Section */}
         <section className="profile-section">
-          <div className="container">
+          <div className="container-header">
             <div className="profile-content">
               <div className="profile-image">
                 <div className="portrait-container">

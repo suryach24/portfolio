@@ -1,5 +1,5 @@
 .about {
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   max-width: 100%;
   margin: 0 auto;
   background: linear-gradient(135deg, #121212, #000000, #f58d8d);
@@ -157,4 +157,8 @@
   .expertise-card h3 {
     font-size: 1.3rem;
   }
+}
+
+.project-card:hover {
+  box-shadow: 0 0 15px var(--primary-color);
 } 

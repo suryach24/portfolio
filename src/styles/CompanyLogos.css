@@ -13,23 +13,30 @@
   padding: 0 1rem;
 }
 
-.section-header {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: var(--primary-color);
-  position: relative;
-  display: flex;
-}
-
 .section-title {
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
   color: var(--primary-color);
   position: relative;
   display: flex;
   justify-content: center;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0rem;
+}
+
+.logos-container-title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+}
+
+.logos-container-title::after {
+  content: '';
+  position: relative;
+  bottom: 0.1rem;
+  left: 0.1rem;
+  width: 50px;
 }
 
 .logos-container {
@@ -57,6 +64,12 @@
 .logos-container::after {
   right: 0;
   background: linear-gradient(to left, rgba(133, 133, 133, 0.349), transparent);
+}
+
+.container-logos {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .logos-track {

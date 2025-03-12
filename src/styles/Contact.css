@@ -1,10 +1,18 @@
 .contact {
-  padding: 5rem 2rem;
-  max-width: 1200px;
+  padding: 2rem 2rem;
+  max-width: 100%;
   margin: 0 auto;
+  background: linear-gradient(135deg, #121212, #000000, #f58d8d), url('/public/images/abstract-bg.jpg'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="2" cy="2" r="2" fill="rgba(255,255,255,0.2)"/></svg>');
+  background-size: cover, 200% 200%, 20px 20px;
+  background-attachment: fixed;
+  animation: gradient-animation 10s ease infinite;
 }
 
 .contact-container {
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  justify-content: center;
   display: flex;
   gap: 4rem;
   margin-top: 3rem;
@@ -17,14 +25,14 @@
 .contact-info h3 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: var(--dark-color);
+  color: white;
 }
 
 .contact-info p {
   margin-bottom: 2rem;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--secondary-color);
+  color: white;
 }
 
 .contact-methods {

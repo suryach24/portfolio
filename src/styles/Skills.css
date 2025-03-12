@@ -1,5 +1,5 @@
 .skills {
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   max-width: 100%;
   margin: 0 auto;
   background: linear-gradient(135deg, #121212, #000000, #f58d8d), url('/public/images/abstract-bg.jpg'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="2" cy="2" r="2" fill="rgba(255,255,255,0.2)"/></svg>');
@@ -38,6 +38,7 @@
 
 .tool-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--primary-color);
 }
 
 .tool-header {
@@ -165,6 +166,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.skill-card:hover {
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .skill-card-inner {
