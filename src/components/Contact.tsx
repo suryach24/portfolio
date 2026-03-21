@@ -2,55 +2,34 @@ import React, { useState } from 'react';
 import '../styles/Contact.css';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const [formStatus, setFormStatus] = useState({
-    submitted: false,
-    success: false,
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formStatus, setFormStatus] = useState({ submitted: false, success: false, message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the form data to a server
-    // For now, we'll just simulate a successful submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: 'Thank you for your message! I will get back to you soon.'
-    });
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    setFormStatus({ submitted: true, success: true, message: 'Thank you! I will get back to you soon.' });
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
     <section id="contact" className="contact">
       <div className="section-header">
-        <h2>Contact Me</h2>
-        <div className="section-line"></div>
+        <p className="section-label">Contact</p>
+        <h2 className="section-title">Get In Touch</h2>
       </div>
+
       <div className="contact-container">
         <div className="contact-info">
-          <h3>Get In Touch</h3>
-          <p>
-            I'm currently working as a Platform Reliability Engineer at InvoiceCloud. Please hit me up if you want to connect.
+          <p className="contact-availability">
+            Currently at <strong>InvoiceCloud</strong> · Open to senior SRE / Staff Engineer roles
           </p>
+          <p>Hit me up if you want to connect, collaborate, or discuss an opportunity.</p>
+
           <div className="contact-methods">
             <div className="contact-method">
               <span className="method-icon">📧</span>
@@ -68,8 +47,15 @@ const Contact: React.FC = () => {
                 github.com/suryach24
               </a>
             </div>
+            <div className="contact-method">
+              <span className="method-icon">📄</span>
+              <a href="/Surya_Chandra_Resume.pdf" download>
+                Download Resume (PDF)
+              </a>
+            </div>
           </div>
         </div>
+
         <div className="contact-form">
           <form onSubmit={handleSubmit}>
             {formStatus.submitted && (
@@ -79,38 +65,17 @@ const Contact: React.FC = () => {
             )}
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
+              <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
+              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                required
-              ></textarea>
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={5} required />
             </div>
-            <button type="submit" className="submit-button">Send Message</button>
+            <button type="submit" className="btn-primary">Send Message</button>
           </form>
         </div>
       </div>
@@ -118,4 +83,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

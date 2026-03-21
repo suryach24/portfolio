@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-logo">
-            <a href="/">YourName</a>
+            <a href="/">Surya Chandra</a>
           </div>
           <div className="footer-links">
             <ul>
@@ -25,9 +25,6 @@ const Footer: React.FC = () => {
             </a>
             <a href="https://linkedin.com/in/suryach24" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com/suryach24" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
             </a>
           </div>
         </div>
