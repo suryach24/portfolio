@@ -30,13 +30,6 @@ const CareerJourney: React.FC = () => {
                   )}
                   <div className="timeline-header">
                     <div className="timeline-company-row">
-                      <div className="timeline-logo-wrap">
-                        <img
-                          src={entry.logo}
-                          alt={`${entry.company} logo`}
-                          className="timeline-logo"
-                        />
-                      </div>
                       <span className="timeline-company">{entry.company}</span>
                     </div>
                     <span className="timeline-period">{entry.period}</span>
