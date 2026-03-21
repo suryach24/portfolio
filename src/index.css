@@ -1,0 +1,118 @@
+/* src/index.css */
+:root {
+  /* Backgrounds */
+  --bg-primary: #0f0c29;
+  --bg-secondary: #302b63;
+  --bg-card: #1a1535;
+  --bg-card-hover: #211c42;
+
+  /* Accent */
+  --accent: #a78bfa;
+  --accent-mid: #7c3aed;
+  --accent-dark: #4c1d95;
+  --accent-deepest: #3b0764;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #c4b5fd;
+  --text-muted: #7c6ab5;
+  --text-dim: #8875b5;
+
+  /* Status colours */
+  --green: #2ecc71;
+  --green-bg: rgba(46, 204, 113, 0.1);
+  --green-border: rgba(46, 204, 113, 0.3);
+  --amber: #f39c12;
+  --amber-bg: rgba(243, 156, 18, 0.1);
+  --amber-border: rgba(243, 156, 18, 0.3);
+
+  /* Provider colours */
+  --aws-orange: #ff9900;
+  --azure-blue: #0078d4;
+
+  /* Borders */
+  --border: rgba(167, 139, 250, 0.2);
+  --border-bright: rgba(167, 139, 250, 0.4);
+  --border-glow: 0 0 12px rgba(167, 139, 250, 0.25);
+
+  /* Spacing */
+  --section-padding: 5rem 2rem;
+  --card-radius: 8px;
+  --pill-radius: 99px;
+
+  /* Migration shims — removed automatically when component stylesheets are rewritten in Tasks 6-14 */
+  --primary-color: var(--accent);
+  --accent-color: var(--accent);
+  --accent-color-dark: var(--accent-mid);
+  --dark-color: var(--bg-primary);
+  --background-color: var(--bg-primary);
+  --light-color: var(--text-primary);
+  --text-color: var(--text-primary);
+  --secondary-color: var(--text-secondary);
+  --border-color: var(--border);
+  --hover-color: var(--accent-mid);
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  --border-radius: var(--card-radius);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+/* Scroll reveal — added by useScrollReveal hook */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    transform: none;
+  }
+}

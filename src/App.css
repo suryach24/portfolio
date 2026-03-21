@@ -1,0 +1,15 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: 70px; /* To account for the fixed header */
+}
+
+/* Remove default styles */
+.App-logo, .App-header, .App-link {
+  display: none;
+}
