@@ -67,10 +67,29 @@
 .timeline-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.25rem;
   margin-bottom: 0.2rem;
+}
+
+.timeline-company-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.timeline-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+.timeline-entry:hover .timeline-logo {
+  opacity: 1;
 }
 
 .timeline-company {
