@@ -1,12 +1,7 @@
 import React from 'react';
-import { projects } from '../data/projectsData';
+import { projects, ArchNode } from '../data/projectsData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import '../styles/Projects.css';
-
-interface ArchNode {
-  label: string;
-  color?: string;
-}
 
 const ArchDiagram: React.FC<{ flow: ArchNode[][] }> = ({ flow }) => (
   <div className="arch-diagram" aria-hidden="true">

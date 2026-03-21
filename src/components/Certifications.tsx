@@ -11,7 +11,7 @@ const Certifications: React.FC = () => {
         <div className="section-header reveal">
           <p className="section-label">Certifications</p>
           <h2 className="section-title">8 Verified Credentials</h2>
-          <p className="section-subtitle">5× AWS · 2× Azure · CKA · Terraform · SAFe</p>
+          <p className="section-subtitle">3× AWS · 2× Azure · CKA · Terraform · SAFe</p>
         </div>
 
         <div className="cert-grid">

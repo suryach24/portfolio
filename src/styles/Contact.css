@@ -80,15 +80,21 @@
 }
 
 .form-message.success {
-  background-color: rgba(40, 167, 69, 0.1);
-  color: var(--success-color);
-  border: 1px solid var(--success-color);
+  color: #28a745;
+  background: rgba(40, 167, 69, 0.1);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  border-radius: var(--card-radius);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .form-message.error {
-  background-color: rgba(220, 53, 69, 0.1);
-  color: var(--danger-color);
-  border: 1px solid var(--danger-color);
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: var(--card-radius);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .form-group {
