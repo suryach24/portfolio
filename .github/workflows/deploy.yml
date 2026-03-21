@@ -24,13 +24,16 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Hostinger via SFTP
+      - name: Setup SSH key
         run: |
-          sudo apt-get install -y lftp
-          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" sftp://${{ secrets.FTP_HOST }} << 'ENDSSH'
-          set sftp:auto-confirm yes
-          set net:timeout 30
-          set net:max-retries 3
-          mirror --reverse --delete --verbose ./build/ /public_html/
-          quit
-          ENDSSH
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 22 -H ${{ secrets.FTP_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Deploy to Hostinger via rsync over SSH
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -p 22" \
+            ./build/ \
+            ${{ secrets.FTP_USERNAME }}@${{ secrets.FTP_HOST }}:public_html/
