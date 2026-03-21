@@ -36,7 +36,7 @@ export const projects: Project[] = [
     id: 2,
     title: 'DALL-E Image Generator Clone',
     description:
-      'OpenAI DALL-E image generator with user authentication, image generation history, and Stripe payment integration for premium usage.',
+      'OpenAI image generator with user authentication, image generation history, and Stripe payment integration for premium usage.',
     technologies: ['React', 'TypeScript', 'Firebase', 'OpenAI API', 'Stripe'],
     githubUrl: 'https://github.com/suryach24/dall-e-image-generator-clone',
     liveUrl: 'https://dall-e-73lh.onrender.com',
