@@ -1,0 +1,205 @@
+.career-journey {
+  padding: var(--section-padding);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(48, 43, 99, 0.3) 100%);
+}
+
+.career-journey-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.career-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-entry {
+  display: flex;
+  gap: 1rem;
+}
+
+.timeline-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.timeline-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--accent-mid);
+  flex-shrink: 0;
+  transition: box-shadow 0.3s;
+}
+
+.timeline-entry.crown-jewel .timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-mid));
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.6);
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  min-height: 24px;
+  background: linear-gradient(var(--accent-mid), var(--accent-dark));
+  margin-top: 3px;
+}
+
+.timeline-body {
+  padding-bottom: 2rem;
+  flex: 1;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-company {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.timeline-role {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.timeline-period {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.timeline-industry {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-achievement {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-style: italic;
+  border-left: 2px solid var(--accent-mid);
+  padding-left: 0.65rem;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag-pill {
+  background: rgba(167, 139, 250, 0.1);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--pill-radius);
+}
+
+.crown-jewel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid var(--green-border);
+  color: var(--green);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--pill-radius);
+  margin-bottom: 0.5rem;
+}
+
+.domain-column h3 {
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.domain-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.domain-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.domain-card:hover {
+  border-color: var(--border-bright);
+  transform: translateX(4px);
+}
+
+.domain-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.domain-info-title {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.domain-info-company {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin: 0.1rem 0;
+}
+
+.domain-info-capability {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.career-tagline {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* accent color is applied via component class; no inline span needed */
+
+@media (max-width: 768px) {
+  .career-layout { grid-template-columns: 1fr; }
+}
