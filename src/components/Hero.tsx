@@ -1,28 +1,52 @@
 import React from 'react';
+import HeroNodeNetwork from './HeroNodeNetwork';
 import '../styles/Hero.css';
 
-const Hero: React.FC = () => {
-  return (
-    <section className="hero">
-      <div className="hero-container">
-        <div className="hero-image">
-          <img 
-            src="/images/surya_face-Photoroom.png" 
-            alt="Surya Chandra Kukunuri"
-            className="hero-portrait"
-          />
-        </div>
-        <span className="masked-text">Hello, I'm Surya Chandra Kukunuri</span>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet"></link>
-        <h1 aria-label="Hi! I'm a developer">&nbsp;<span className="typewriter thick"></span>
-        </h1>
-        <div className="cta-buttons">
-          <a href="#contact" className="primary-button">Get in touch</a>
-          <a href="#projects" className="secondary-button">View Projects</a>
-        </div>
-      </div>
-    </section>
-  );
-};
+const STATS = [
+  { value: '7+',  label: 'Years Experience' },
+  { value: '8×',  label: 'Certified' },
+  { value: '5',   label: 'Industries' },
+  { value: '25+', label: 'AWS Services' },
+];
 
-export default Hero; 
+const Hero: React.FC = () => (
+  <section className="hero">
+    <HeroNodeNetwork />
+
+    <div className="hero-content">
+      <p className="section-label">Platform Reliability Engineer · DevSecOps · Cloud Architect</p>
+
+      <h1 className="hero-name">Surya Chandra Kukunuri</h1>
+
+      <p className="hero-tagline">
+        "Building cloud infrastructure that doesn't page you at 3am"
+      </p>
+
+      <div className="hero-typewriter">
+        <span className="typewriter thick" aria-label="Role title" />
+      </div>
+
+      <div className="hero-stats">
+        {STATS.map(({ value, label }) => (
+          <div className="hero-stat" key={label}>
+            <span className="hero-stat-value">{value}</span>
+            <span className="hero-stat-label">{label}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="hero-cta">
+        <a href="#projects" className="btn-primary">View My Work</a>
+        <a
+          href="/Surya_Chandra_Resume.pdf"
+          className="btn-secondary"
+          download
+        >
+          Resume ↓
+        </a>
+      </div>
+    </div>
+  </section>
+);
+
+export default Hero;
