@@ -59,7 +59,7 @@ export const careerEntries: CareerEntry[] = [
     tags: ['Azure DevOps', 'PowerBI', 'Copado', 'Selenium', 'Canary Deployments'],
   },
   {
-    company: 'Coyote Logistics',
+    company: 'Coyote Logistics (now RXO)',
     logo: '/images/companies/coyote-logistics-logo.svg',
     role: 'Associate DevOps Engineer',
     period: '2016 – 2019',
