@@ -1,6 +1,5 @@
 export interface CareerEntry {
   company: string;
-  logo: string;
   role: string;
   period: string;
   industry: string;
@@ -20,7 +19,6 @@ export interface DomainCard {
 export const careerEntries: CareerEntry[] = [
   {
     company: 'InvoiceCloud',
-    logo: '/images/companies/invoice-cloud-logo.svg',
     role: 'Platform Reliability Engineer',
     period: '2023 – Present',
     industry: 'FinTech · Payments',
@@ -30,7 +28,6 @@ export const careerEntries: CareerEntry[] = [
   },
   {
     company: 'Verizon',
-    logo: '/images/companies/verizon-logo.svg',
     role: 'DevSecOps Engineer',
     period: '2022 – 2023',
     industry: 'Telecom',
@@ -40,7 +37,6 @@ export const careerEntries: CareerEntry[] = [
   },
   {
     company: 'Ally Financial',
-    logo: '/images/companies/ally-logo.svg',
     role: 'Sr. DevOps / Jr. SRE',
     period: '2021 – 2022',
     industry: 'FinTech · Auto Finance',
@@ -50,7 +46,6 @@ export const careerEntries: CareerEntry[] = [
   },
   {
     company: 'Humana Inc.',
-    logo: '/images/companies/humana-logo.svg',
     role: 'DevOps Engineer',
     period: '2019 – 2021',
     industry: 'Healthcare',
@@ -60,7 +55,6 @@ export const careerEntries: CareerEntry[] = [
   },
   {
     company: 'Coyote Logistics (now RXO)',
-    logo: '/images/companies/coyote-logistics-logo.svg',
     role: 'Associate DevOps Engineer',
     period: '2016 – 2019',
     industry: 'Supply Chain',
