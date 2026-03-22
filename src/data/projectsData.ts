@@ -17,6 +17,23 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'doratrace — DORA Metrics Dashboard',
+    description:
+      'Standalone SRE tool that calculates all 4 DORA metrics for any public GitHub or Azure DevOps repository. Enter a full URL and get Deployment Frequency, Lead Time, MTTR, and Change Failure Rate — with cascading fallbacks for repos without formal releases or PRs.',
+    technologies: ['React', 'TypeScript', 'Node/Express', 'GitHub API', 'Azure DevOps API', 'Nginx', 'PM2'],
+    githubUrl: 'https://github.com/suryach24/doratrace',
+    liveUrl: 'https://doratrace.surya-kukunuri.com',
+    isLive: true,
+    architectureFlow: [
+      [{ label: 'React + Vite', color: '--accent' }],
+      [{ label: 'Node/Express', color: '--text-secondary' }],
+      [{ label: 'GitHub API', color: '--green' }, { label: 'ADO API', color: '--azure-blue' }],
+      [{ label: 'Nginx', color: '--text-secondary' }, { label: 'PM2', color: '--accent' }],
+      [{ label: 'Hetzner VPS', color: '--aws-orange' }],
+    ],
+  },
+  {
+    id: 2,
     title: 'DTSS — Address Book',
     description:
       'Full-stack MERN application with CRUD operations, search/sort, import/export, user authentication, and backup/restore. React frontend communicates with a dedicated Express REST API backed by MongoDB.',
@@ -31,7 +48,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Pricewise — Price Tracker',
     description:
       'Next.js full-stack price tracking tool that scrapes product data from e-commerce sites using Cheerio, stores prices in MongoDB, and emails alerts via Nodemailer when prices drop.',
@@ -42,23 +59,6 @@ export const projects: Project[] = [
       [{ label: 'Next.js', color: '--accent' }],
       [{ label: 'Cheerio Scraper', color: '--text-secondary' }],
       [{ label: 'MongoDB', color: '--green' }, { label: 'Nodemailer', color: '--amber' }],
-    ],
-  },
-  {
-    id: 3,
-    title: 'doratrace — DORA Metrics Dashboard',
-    description:
-      'Standalone SRE tool that calculates all 4 DORA metrics for any public GitHub or Azure DevOps repository. Enter a full URL and get Deployment Frequency, Lead Time, MTTR, and Change Failure Rate — with cascading fallbacks for repos without formal releases or PRs.',
-    technologies: ['React', 'TypeScript', 'Node/Express', 'GitHub API', 'Azure DevOps API', 'Nginx', 'PM2'],
-    githubUrl: 'https://github.com/suryach24/doratrace',
-    liveUrl: 'https://doratrace.surya-kukunuri.com',
-    isLive: true,
-    architectureFlow: [
-      [{ label: 'React + Vite', color: '--accent' }],
-      [{ label: 'Node/Express', color: '--text-secondary' }],
-      [{ label: 'GitHub API', color: '--green' }, { label: 'ADO API', color: '--azure-blue' }],
-      [{ label: 'Nginx', color: '--text-secondary' }, { label: 'PM2', color: '--accent' }],
-      [{ label: 'Hetzner VPS', color: '--aws-orange' }],
     ],
   },
 ];
