@@ -49,6 +49,23 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    title: 'doratrace — DORA Metrics Dashboard',
+    description:
+      'Standalone SRE tool that calculates all 4 DORA metrics for any public GitHub or Azure DevOps repository. Enter a full URL and get Deployment Frequency, Lead Time, MTTR, and Change Failure Rate — with cascading fallbacks for repos without formal releases or PRs.',
+    technologies: ['React', 'TypeScript', 'Node/Express', 'GitHub API', 'Azure DevOps API', 'Nginx', 'PM2'],
+    githubUrl: 'https://github.com/suryach24/doratrace',
+    liveUrl: 'https://doratrace.surya-kukunuri.com',
+    isLive: true,
+    architectureFlow: [
+      [{ label: 'React + Vite', color: '--accent' }],
+      [{ label: 'Node/Express', color: '--text-secondary' }],
+      [{ label: 'GitHub API', color: '--green' }, { label: 'ADO API', color: '--azure-blue' }],
+      [{ label: 'Nginx', color: '--text-secondary' }, { label: 'PM2', color: '--accent' }],
+      [{ label: 'Hetzner VPS', color: '--aws-orange' }],
+    ],
+  },
+  {
+    id: 4,
     title: 'Pricewise — E-Commerce Scraper',
     description:
       'Price tracking platform that scrapes product data from e-commerce sites, stores it, and alerts users when prices drop.',
